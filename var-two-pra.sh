@@ -7,8 +7,8 @@
 #to hide username and passwd
 
 echo "enter username::"
-echo "enter passwd::"
 read -s username
+echo "enter passwd::"
 read -s passwd
 echo "username entered:$username"
 echo "password entered:$passwd"
