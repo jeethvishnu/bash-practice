@@ -1,3 +1,4 @@
+#!/bin/bash
 num=$1
 
 if [$num -gt 10]
