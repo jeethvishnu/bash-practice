@@ -14,7 +14,7 @@ num1=$1
 num2=$2
 if [ $num1 -gt $num2 ]
 then
-    echo "number $num1 is gretaer than num2"
+    echo "number $num1 is gretaer than $num2"
 else
     echo "number $num2 is greater tha $num1"
 fi
