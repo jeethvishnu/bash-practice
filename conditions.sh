@@ -10,11 +10,21 @@
 
 # practice
 
+# num1=$1
+# num2=$2
+# if [ $num1 -gt $num2 ]
+# then
+#     echo "number $num1 is gretaer than $num2"
+# else
+#     echo "number $num2 is greater tha $num1"
+# fi
+
 num1=$1
 num2=$2
-if [ $num1 -gt $num2 ]
-then
-    echo "number $num1 is gretaer than $num2"
+if [ $num1 -lt $l2 ]
+then    
+    echo "given number $num1 is less than $num2"
 else
-    echo "number $num2 is greater tha $num1"
+    echo "given number $num1 is not less than $num2"
+    
 fi
