@@ -42,14 +42,24 @@
 # fi
 
 #greater tha equal to
-l1=$1
-l2=$2
+# l1=$1
+# l2=$2
 
-if [ $l1 -ge $l2 ]
-then
-    echo "it greater than or equal to "
-else
-    echo "its not"
-fi
+# if [ $l1 -ge $l2 ]
+# then
+#     echo "it greater than or equal to "
+# else
+#     echo "its not"
+# fi
 
+# less than or equal
+# l1=$1
+# l2=$2
+
+# if [ $l1 -le $l2 ]
+# then
+#     echo "it greater than or equal to "
+# else
+#     echo "its not"
+# fi
 
