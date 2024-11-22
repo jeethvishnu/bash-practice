@@ -1,3 +1,3 @@
 a=('aa' 'bb' 'cc')
 echo "no of variables passed: $#"
-echo "print all vars : ${a[@]}
+echo "print all vars : ${a[@]}"
