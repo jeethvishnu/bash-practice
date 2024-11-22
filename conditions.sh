@@ -32,13 +32,24 @@
 # fi
 
 # equal to
+# l1=$1
+# l2=$2
+# if [ $l1 -eq $l2 ]
+# then
+#     echo "both are equal"
+# else 
+#     echo "both are not"
+# fi
+
+#greater tha equal to
 l1=$1
 l2=$2
-if [ $l1 -eq $l2 ]
+
+if [ $l1 -ge $l2 ]
 then
-    echo "both are equal"
-else 
-    echo "both are not"
+    echo "it greater than or equal to "
+else
+    echo "its not"
 fi
 
 
