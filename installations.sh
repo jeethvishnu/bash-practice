@@ -12,4 +12,22 @@ else
 fi
 
 dnf install mysql -y
+#so like we if theres any problem while installing mysql we have to check because machines can do mistakes some problems may occur sometimes while installing pacakages
+if [ $? -ne 0 ]
+then
+    echo "failed"
+    exit 1
+else
+    echo "success"
+
+fi
+
+dnf install git -y
+if [$? -ne 0 ]
+then
+    echo "failed"
+else  
+    echo "pass"
+fi
+
 echo "is script proceeding"
