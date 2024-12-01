@@ -24,6 +24,8 @@
 # dnf install git -y
 # validate $? "installing git"
 
+
+
 #second
 
 user=$(id -u) #check if super user or not first
