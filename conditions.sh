@@ -63,3 +63,15 @@
 #     echo "its not"
 # fi
 
+#!/bin/bash
+
+# l1=$1
+# l2=$2
+
+# if [ l1 -gt l2 ]
+# then
+#     echo "$l1 is greater than $ls"
+# else
+#     echo "its not greater"
+# fi
+
