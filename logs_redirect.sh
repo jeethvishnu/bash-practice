@@ -1,7 +1,7 @@
 user=$(id -u) #check if super user or not first
 timestamp=$(date +%F-%H-%M-%S)
 scriptname=$(echo $0 | cut -d "." -f1)
-log=/tmp/$script-$timestamp.log
+log=/tmp/$scriptname-$timestamp.log
 r="\e[31m"
 g="\e[32m"
 n="\e[0m"
