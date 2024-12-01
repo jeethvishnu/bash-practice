@@ -26,6 +26,7 @@ dnf install git -y
 if [$? -ne 0 ]
 then
     echo "failed"
+    exit 1
 else  
     echo "pass"
 fi
