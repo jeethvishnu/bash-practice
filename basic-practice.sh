@@ -38,10 +38,10 @@ else
 fi
 
 dnf install mysql -y
-# if [ $? -ne 0 ]
-# then
-#     echo "failed"
-# else    
-#     echo "success"
-# fi
+if [ $? -ne 0 ]
+then
+    echo "failed"
+else    
+    echo "success"
+fi
 
