@@ -28,12 +28,12 @@
 #!/bin/bash
 
 userid=$(id -u)
-if [ userid -eq 0 ]
+if [ userid -ne 0 ]
 then
-    echo "super user"
+    echo "you need su"
     exit 1
 else
-    echo "you need su"
+    echo "installing"
 
 fi
 
