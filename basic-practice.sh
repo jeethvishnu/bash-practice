@@ -18,10 +18,30 @@
 # echo "your username is: $username"
 # echo "your passwd is: $passwd"
 
-a=('apple' 'banana' 'grapes')
-echo "first element is: ${a[0]}"
-echo "second element is: ${a[1]}"
-echo "third element is: ${a[2]}"
+# a=('apple' 'banana' 'grapes')
+# echo "first element is: ${a[0]}"
+# echo "second element is: ${a[1]}"
+# echo "third element is: ${a[2]}"
 
-echo "all elemnts: ${a[@]}"
+# echo "all elemnts: ${a[@]}"
+
+#!/bin/bash
+
+userid=$(id -u)
+if [ userid -eq 0 ]
+then
+    echo "super user"
+    exit 1
+else
+    echo "you need su"
+
+fi
+
+dnf install mysql -y
+if [ $? -ne 0 ]
+then
+    echo "failed"
+else    
+    echo "success"
+fi
 
