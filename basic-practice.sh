@@ -28,7 +28,7 @@
 #!/bin/bash
 
 userid=$(id -u)
-if [ userid -ne 0 ]
+if [ $userid -ne 0 ]
 then
     echo "you need su"
     exit 1
