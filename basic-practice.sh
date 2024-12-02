@@ -68,17 +68,20 @@
 
 # using functions practice
 usr=$(id -u)
+
 val(){
     if [ $1 -ne 0 ]
     then    
-        echo "failed"
+        echo "$2... failed"
+        exit 1
     else
-        echo "successful"
+        echo "$2...successful"
 }
 
 if [ user -ne 0 ]
 then
     echo "is this sudo"
+    exit 1
 else
     echo "you are in sudo"
 fi
