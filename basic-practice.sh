@@ -97,9 +97,9 @@ user=$(id -u)
 val(){
     if [ $1 -ne 0 ]
     then
-        echo "$2 is installing"
+        echo "$2 is corrupted"
     else
-        echo "$2 corrupted"
+        echo "$2 installing"
     fi
 }
 if [ $user -ne 0 ]
