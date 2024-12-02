@@ -56,9 +56,9 @@ else
 fi
 
 dnf install ariaa2 -y
-if [ $? -ne 0 ]
-then
-    echo "failed"
-else
-    echo "successful"
-fi
+# if [ $? -ne 0 ]
+# then
+#     echo "failed"
+# else
+#     echo "successful"
+# fi
