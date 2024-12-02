@@ -46,19 +46,46 @@
 # fi
 
 
-user=$(id -u)
-if [ $user -ne 0 ]
+# user=$(id -u)
+# if [ $user -ne 0 ]
+# then
+#     echo "is this super user"
+#     exit 1
+# else
+#     echo "success"
+# fi
+
+# dnf install aria2 -y
+# if [ $? -ne 0 ]
+# then
+#     echo "failed"
+# else
+#     echo "successful"
+# fi
+
+
+
+
+# using functions practice
+usr=$(id -u)
+val(){
+    if [ $1 -ne 0 ]
+    then    
+        echo "failed"
+    else
+        echo "successful"
+
+}
+
+if [ user -ne 0 ]
 then
-    echo "is this super user"
-    exit 1
+    echo "is this sudo"
 else
-    echo "success"
+    echo "you are in sudo"
 fi
 
-dnf install aria2 -y
-if [ $? -ne 0 ]
-then
-    echo "failed"
-else
-    echo "successful"
-fi
+dnf install mysql -y
+val $? "installing mysql success"
+
+dnf install wget -y
+val $? "installing wget success"
