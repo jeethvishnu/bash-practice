@@ -76,6 +76,7 @@ val(){
         exit 1
     else
         echo "$2...successful"
+    fi
 }
 
 if [ $usr -ne 0 ]
