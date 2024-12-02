@@ -110,7 +110,7 @@ else
 fi
 
 dnf install mysql -y
-val $? "mysql installing success"
+val $? "mysql installing done"
 
 dnf install curl -y
-val $? "curl installing success"
+val $? "curl installing done"
