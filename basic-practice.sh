@@ -55,7 +55,7 @@ else
     echo "success"
 fi
 
-dnf install aria2 -y
+dnf install ariaa2 -y
 if [ $? -ne 0 ]
 then
     echo "failed"
