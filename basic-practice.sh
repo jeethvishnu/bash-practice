@@ -78,7 +78,7 @@ val(){
         echo "$2...successful"
 }
 
-if [ user -ne 0 ]
+if [ $usr -ne 0 ]
 then
     echo "is this sudo"
     exit 1
