@@ -27,21 +27,38 @@
 
 #!/bin/bash
 
-userid=$(id -u)
-if [ $userid -ne 0 ]
+# userid=$(id -u)
+# if [ $userid -ne 0 ]
+# then
+#     echo "you need su"
+#     exit 1
+# else
+#     echo "installing"
+
+# fi
+
+# dnf install mysql -y
+# if [ $? -ne 0 ]
+# then
+#     echo "failed"
+# else    
+#     echo "success"
+# fi
+
+
+user=$(id -u)
+if [ $user -ne 0 ]
 then
-    echo "you need su"
+    echo "is this super user"
     exit 1
 else
-    echo "installing"
-
-fi
-
-dnf install mysql -y
-if [ $? -ne 0 ]
-then
-    echo "failed"
-else    
     echo "success"
 fi
 
+dnf install aria2 -y
+if [ $? -ne 0 ]
+then
+    echo "failed"
+else
+    echo "successful"
+fi
