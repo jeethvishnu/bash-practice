@@ -74,7 +74,6 @@ val(){
         echo "failed"
     else
         echo "successful"
-
 }
 
 if [ user -ne 0 ]
