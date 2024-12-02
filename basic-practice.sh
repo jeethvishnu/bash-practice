@@ -55,10 +55,10 @@ else
     echo "success"
 fi
 
-dnf install ariaa2 -y
-# if [ $? -ne 0 ]
-# then
-#     echo "failed"
-# else
-#     echo "successful"
-# fi
+dnf install aria2 -y
+if [ $? -ne 0 ]
+then
+    echo "failed"
+else
+    echo "successful"
+fi
