@@ -67,28 +67,50 @@
 
 
 # using functions practice
-usr=$(id -u)
+# usr=$(id -u)
 
+# val(){
+#     if [ $1 -ne 0 ]
+#     then    
+#         echo "$2... failed"
+#         exit 1
+#     else
+#         echo "$2...successful"
+#     fi
+# }
+
+# if [ $usr -ne 0 ]
+# then
+#     echo "is this sudo"
+#     exit 1
+# else
+#     echo "you are in sudo"
+# fi
+
+# dnf install mysql -y
+# val $? "installing mysql success"
+
+# dnf install wget -y
+# val $? "installing wget success"
+
+user=$(id -u)
 val(){
     if [ $1 -ne 0 ]
-    then    
-        echo "$2... failed"
-        exit 1
+    then
+        echo "$2 is installing"
     else
-        echo "$2...successful"
+        echo "$2 corrupted"
     fi
 }
-
-if [ $usr -ne 0 ]
+if [ $user -ne 0 ]
 then
     echo "is this sudo"
-    exit 1
 else
-    echo "you are in sudo"
+    echo "in sudo"
 fi
 
 dnf install mysql -y
-val $? "installing mysql success"
+val $? "mysql installing success"
 
-dnf install wget -y
-val $? "installing wget success"
+dnf install curl -y
+val $? "curl installing success"
