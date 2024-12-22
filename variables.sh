@@ -10,3 +10,8 @@ p2=sheetal
 
 echo "hi $p1"
 echo "hi $p2 how are you"
+echo "enter your username and passwd"
+read username
+read passwd
+echo "username added: $username"
+echo "passwd added: $passwd"
