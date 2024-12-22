@@ -12,4 +12,4 @@ lst=('a' 'b' 'c')
 echo "first is ${lst[0]}"
 echo "second is ${lst[1]}"
 echo "third is ${lst[2]}"
-echo "all the elements ${lst[@]}
+echo "all the elements ${lst[@]}"
