@@ -63,7 +63,7 @@ dun(){
     fi
 
 }
-if [ ui -ne 0 ]
+if [ $ui -ne 0 ]
 then
     echo "is this sudo"
     exit 1
