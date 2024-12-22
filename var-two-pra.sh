@@ -6,9 +6,19 @@
 
 #to hide username and passwd
 
-echo "enter username::"
-read -s username
-echo "enter passwd::"
-read -s passwd
-echo "username entered:$username"
-echo "password entered:$passwd"
+# echo "enter username::"
+# read -s username
+# echo "enter passwd::"
+# read -s passwd
+# echo "username entered:$username"
+# echo "password entered:$passwd"
+
+#!/bin/bash
+
+echo "enter name"
+read $name
+echo "enter passwd"
+read $password
+
+echo "username added: $name"
+echo "password added: $password"
