@@ -12,7 +12,7 @@ else
 fi
 
 dnf install mysql -y
-#so like we if theres any problem while installing mysql we have to check because machines can do mistakes some problems may occur sometimes while installing pacakages
+#so we if theres any problem while installing mysql we have to check because machines can do mistakes some problems may occur sometimes while installing pacakages
 if [ $? -ne 0 ]
 then
     echo "failed"
