@@ -7,7 +7,12 @@
 #  echo "your usrnmane: $username"
 #  echo "your passwd: $passwd"
 
-n1=$1
-n2=$2
-sum= $(($n1 + $n2))
-echo "total is : $sum"
+# n1=$1
+# n2=$2
+# sum= $(($n1 + $n2))
+# echo "total is : $sum"
+
+a=2
+b=4
+s=$(($a-$b))
+echo "total is: $s"
