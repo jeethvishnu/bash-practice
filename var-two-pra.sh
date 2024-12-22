@@ -21,4 +21,4 @@ echo "enter passwd"
 read $password
 
 echo "username added:: $name"
-echo "password added:$password"
+echo "password added::$password"
