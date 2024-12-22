@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "enter username::"
-read username
-echo "username added:$username"
+# echo "enter username::"
+# read username
+# echo "username added:$username"
 
 #to hide username and passwd
 
@@ -15,10 +15,10 @@ echo "username added:$username"
 
 
 
-# echo "enter name"
-# read $name
-# echo "enter passwd"
-# read $password
+echo "enter name"
+read $name
+echo "enter passwd"
+read $password
 
-# echo "username added: $name"
-# echo "password added:$password"
+echo "username added:: $name"
+echo "password added:$password"
