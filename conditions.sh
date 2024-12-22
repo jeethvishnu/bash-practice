@@ -83,3 +83,12 @@ then
 else
     echo "its not"
 fi
+
+
+a=4
+if [ $a -eq 4 ]
+then
+    echo "it is equal"
+else
+    echo "its not"
+fi
