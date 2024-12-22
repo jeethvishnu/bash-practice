@@ -15,10 +15,10 @@
 
 
 
-echo "enter name"
-read $name
+echo "enter name:"
+read name
 echo "enter passwd"
-read $password
+read password
 
-echo "username added:: $name"
-echo "password added::$password"
+echo "username added: $name"
+echo "password added: $password"
