@@ -30,25 +30,46 @@
 #     echo "success.."
 # fi
 
-usr=$(id -u)
-val(){
+# usr=$(id -u)
+# val(){
+#     if [ $1 -ne 0 ]
+#     then
+#         echo "$2 failed"
+#         exit 1
+#     else
+#         echo "$2 success"
+#     fi
+
+# }
+# if [ usr -ne 0 ]
+# then
+#     echo "is is sudo"
+#     exit 1
+# else
+#     echo "IN SUDO"
+# fi
+
+# dnf install docker -y
+# val $? "installing docker"
+
+ui=$(id -u)
+dun(){
     if [ $1 -ne 0 ]
     then
         echo "$2 failed"
         exit 1
     else
         echo "$2 success"
-    fi
 
 }
-if [ usr -ne 0 ]
+if [ ui -ne 0 ]
 then
-    echo "is is sudo"
+    echo "is this sudo"
     exit 1
 else
     echo "IN SUDO"
 fi
 
-dnf install docker -y
-val $? "installing docker"
+dnf install mysql-server -y
+dun $? "mysql-server installing"
 
