@@ -34,10 +34,10 @@ usr=$(id -u)
 val(){
     if [ $1 -ne 0 ]
     then
-        echo "failed"
+        echo "$2 failed"
         exit 1
     else
-        echo "success"
+        echo "$2 success"
     fi
 
 }
@@ -49,6 +49,6 @@ else
     echo "IN SUDO"
 fi
 
-dnf install wget -y
-val $? "installing"
+dnf install docker -y
+val $? "installing docker"
 
