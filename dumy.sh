@@ -60,6 +60,7 @@ dun(){
         exit 1
     else
         echo "$2 success"
+    fi
 
 }
 if [ ui -ne 0 ]
