@@ -12,7 +12,12 @@
 # sum= $(($n1 + $n2))
 # echo "total is : $sum"
 
-a=2
-b=4
-s=$(($a-$b))
-echo "total is: $s"
+# a=2
+# b=4
+# s=$(($a-$b))
+# echo "total is: $s"
+
+a=12
+b=12
+m=$(($a*$b))
+echo "total is :$m"
