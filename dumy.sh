@@ -20,3 +20,11 @@ then
 else        
     echo "success"
 fi
+
+dnf install wget -y
+if [ $? -ne 0 ]
+then
+    echo "failed"
+else
+    echo "success"
+fi
