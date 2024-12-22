@@ -18,8 +18,8 @@ echo "passwd added: $passwd"
 
 echo "enter $p2 details"
 echo "enter name"
-read name
+read -s name
 echo "passwd"
-read passwd
+read -s passwd
 echo "name added: $name"
 echo "passwd added: $passwd"
