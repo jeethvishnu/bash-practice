@@ -1,6 +1,6 @@
 #!/bin/bash
-p1 = "vishnu"
-p2 = "jeeth"
+p1 ="vishnu"
+p2 ="jeeth"
 
 echo "hi $p1 how are you"
 echo "hi $p2 i am good"
