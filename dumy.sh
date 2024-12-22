@@ -38,7 +38,7 @@ val(){
         exit 1
     else
         echo "success"
-    
+    fi
 
 }
 if [ usr -ne 0 ]
