@@ -75,3 +75,11 @@
 #     echo "its not greater"
 # fi
 
+
+n=5
+if [ $n -gt 10 ]
+then
+    echo "it is greater"
+else
+    echo "its not"
+fi
