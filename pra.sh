@@ -17,7 +17,12 @@
 # s=$(($a-$b))
 # echo "total is: $s"
 
-a=12
-b=12
-m=$(($a*$b))
-echo "total is :$m"
+# a=12
+# b=12
+# m=$(($a*$b))
+# echo "total is :$m"
+
+a=2
+b=3
+d=$(($a/$b))
+echo "total is: $d"
