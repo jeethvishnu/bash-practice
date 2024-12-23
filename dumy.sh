@@ -52,18 +52,39 @@
 # dnf install docker -y
 # val $? "installing docker"
 
-ui=$(id -u)
-dun(){
+# ui=$(id -u)
+# dun(){
+#     if [ $1 -ne 0 ]
+#     then
+#         echo "$2 failed"
+#         exit 1
+#     else
+#         echo "$2 success"
+#     fi
+
+# }
+# if [ $ui -ne 0 ]
+# then
+#     echo "is this sudo"
+#     exit 1
+# else
+#     echo "IN SUDO"
+# fi
+
+# dnf install mysql-server -y
+# dun $? "mysql-server installing"
+
+
+usr=$(id -u)
+lak(){
     if [ $1 -ne 0 ]
     then
         echo "$2 failed"
-        exit 1
     else
         echo "$2 success"
     fi
-
 }
-if [ $ui -ne 0 ]
+if [ $usr -ne 0 ]
 then
     echo "is this sudo"
     exit 1
@@ -71,6 +92,7 @@ else
     echo "IN SUDO"
 fi
 
-dnf install mysql-server -y
-dun $? "mysql-server installing"
+dnf install curl -y
+lak $? "curl installed"
+
 
