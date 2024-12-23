@@ -35,7 +35,7 @@ lak $? "installing"
 id expense -y
 if [ $? -ne 0 ]
 then    
-    useradd expense -y
+    useradd expense
     lak $? 'creating usr'
 else
     echo "already created skipping"
