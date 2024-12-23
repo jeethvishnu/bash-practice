@@ -23,20 +23,20 @@ else
     echo "SUDO"
 fi
 
-dnf module disable nodejs -y
+dnf module disable nodejs -y &>>log
 lak $? "disabling"
 
-dnf module enable nodejs:20 -y
+dnf module enable nodejs:20 -y &>>log
 lak $? "enabling"
 
-dnf install nodejs -y
+dnf install nodejs -y &>>log
 lak $? "installing"
 
 id expense
 if [ $? -ne 0 ]
 then    
-    useradd expense
-    lak $? 'creating usr'
+    useradd expense &>>log
+    lak $? "creating usr"
 else
     echo "already created skipping"
 fi
