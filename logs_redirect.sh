@@ -17,7 +17,7 @@
 
 usr=$(id -u)
 time=$(date +%F-%H-%M-%S)
-scriptname=$($0 | cut -d "." -f1)
+scriptname=$(echo $0 | cut -d "." -f1)
 log=/tmp/$scriptname-$time.log
 lak(){
     if [ $1 -ne 0 ]

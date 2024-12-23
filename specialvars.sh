@@ -2,7 +2,7 @@ a=('aa' 'bb' 'cc')
 echo "no of variables passed: $#"
 echo "print all vars : ${a[@]}"
 echo "print current working dir : $PWD"
-echo "print script name: $o"
+echo "print script name: $0"
 echo "print home dir: $HOME"
 echo "print current user : $USER"
 echo "print hostname: $HOSTNAME"
