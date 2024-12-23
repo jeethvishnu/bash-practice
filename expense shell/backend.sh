@@ -32,7 +32,7 @@ lak $? "enabling"
 dnf install nodejs -y
 lak $? "installing"
 
-id expense -y
+id expense
 if [ $? -ne 0 ]
 then    
     useradd expense
