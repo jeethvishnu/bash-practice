@@ -5,6 +5,16 @@ scriptname=$(echo $0 | cut -d "." -f1)
 log=/tmp/$scriptname-$time.log
 
 u=$(id -u)
+
+lak(){
+    if [ $1 -ne 0 ]
+    then
+        echo "$2 failed"
+    else
+        echo "$2 success"
+    fi
+}
+
 if [ $u -ne 0 ]
 then
     echo "is this sudo"
@@ -20,10 +30,14 @@ do
     if [ $? -eq 0 ]
     then    
         echo "$i already installed"
+    # else
+    #     echo "$i not installed...need to"
     else
-        echo "$i not installed...need to"
+        dnf install $i -y &>>log
+        lak $? "installation of $i"
     fi
 done
+
 
 
 
