@@ -40,9 +40,9 @@ if [ $? -ne 0 ]
 then
      mysql_secure_installation --set-root-pass ExpenseApp@1 &>>log
      lak $? "password new setup"
-     
+
 else
-    echo "sql passwd is already set"
+    echo "sql passwd is already set skip"
 fi
 
 
