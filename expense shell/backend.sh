@@ -47,7 +47,8 @@ lak $? "dir"
 curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip &>>log
 lak $? "backend code downloading"
 
-cd /app &>>log
+cd /app 
+rm -rf /app/*
 unzip /tmp/backend.zip
 lak $? "extracted backend code"
 
