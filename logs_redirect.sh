@@ -1,36 +1,43 @@
-user=$(id -u) #check if super user or not first
-timestamp=$(date +%F-%H-%M-%S)
-scriptname=$(echo $0 | cut -d "." -f1)
-log=/tmp/$scriptname-$timestamp.log
-r="\e[31m"
-g="\e[32m"
-n="\e[0m"
+#!/bin/bash
+#logs: 
+#------
+#   we should store the logs of nay coding
 
-validate(){
-   if [ $1 -ne 0 ]
-   then
-        echo -e "$2...$r fail $n"
-        exit 1
+#redirectiosn
+#------------
+#   > -- by default only success output will redirected
+#   1 -- success
+#   2 -- error
+#   &> -- stores both error and success
+#   >> -- append the data ex: &>> something
+#   > -- overwrite
+
+#Note : ther should be no space b/w & and >
+
+
+usr=$(id -u)
+time=$(date +%F-%H-%M-%S)
+scriptname=$($0 | cut -d "." -f1)
+log=/tmp/$scriptname-$time.log
+lak(){
+    if [ $1 -ne 0 ]
+    then
+        echo "$2 failed"
     else
-        echo -e "$2...$g success $n"
+        echo "$2 success"
     fi
-
 }
-
-if [ $user -ne 0 ]
+if [ $usr -ne 0 ]
 then
-    echo "please run in super user"
-    exit 1 #manually exit if error comes
+    echo "is this sudo"
+    exit 1
 else
-    echo "you are super usr"
+    echo "IN SUDO"
 fi
 
-dnf install mysql -y &>>log
-validate $? "installing sql"
+dnf install curl -y &>>log
+lak $? "curl installed"
 
+dnf install wget -y &>>log
+lak $? "wget installed"
 
-dnf install git -y &>>log
-validate $? "installing git"
-
-dnf install dockerr -y &>>log
-validate $? "installing docker"
