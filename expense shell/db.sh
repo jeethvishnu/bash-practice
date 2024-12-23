@@ -32,5 +32,15 @@ lak $? "enabling"
 systemctl start mysqld &>>log
 lak $? "starting"
 
-mysql_secure_installation --set-root-pass ExpenseApp@1 &>>log
-lak $? "setting root password"
+# mysql_secure_installation --set-root-pass ExpenseApp@1 &>>log
+# lak $? "setting root password"
+
+mysql -h db.daws78s.online -uroot -pExpenseApp@1 -e 'show databases;' &>>log
+if [ $? -ne 0 ]
+then
+     mysql_secure_installation --set-root-pass ExpenseApp@1 &>>log
+else
+    echo "sql passwd is already set"
+fi
+
+
