@@ -38,8 +38,8 @@ lak $? "starting"
 mysql -h db.daws78s.online -uroot -pExpenseApp@1 -e 'show databases;' &>>log
 if [ $? -ne 0 ]
 then
-     mysql_secure_installation --set-root-pass ExpenseApp@1 &>>log
-     lak $? "password new setup"
+     mysql_secure_installation --set-root-pass ExpenseApp@1
+     lak $? "password root setup"
 
 else
     echo "sql passwd is already set skip"
