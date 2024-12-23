@@ -41,16 +41,34 @@ else
     echo "already created skipping"
 fi
 
-mkdir -p /app
+mkdir -p /app &>>log
 lak $? "dir"
 
-curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
+curl -o /tmp/backend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip &>>log
 lak $? "backend code downloading"
 
-cd /app
+cd /app &>>log
 unzip /tmp/backend.zip
 lak $? "extracted backend code"
 
-npm install
+npm install &>>log
 lak $? "installing"
 
+cp /home/ec2-user/bash-practice/expense shell/backend.service /etc/systemd/system/backend.service &>>log
+lak $? "copied backend service"
+
+systemctl daemon-reload &>>log
+
+systemctl start backend &>>log
+
+systemctl enable backend &>>log
+lak $? "starting and enabling backend"
+
+dnf install mysql -y &>>log
+lak $? "installing"
+
+mysql -h db.vjeeth.site -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>log
+lak $? "schema loading"
+
+systemctl restart backend &>>log
+lak $? "restarting backend"
