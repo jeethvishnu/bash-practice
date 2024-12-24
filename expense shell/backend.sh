@@ -55,7 +55,8 @@ lak $? "extracted backend code"
 npm install &>>log
 lak $? "installing"
 
-cp /home/ec2-user/bash-practice/expense shell/backend.service  &>>log
+#check your repo and path
+cp /home/ec2-user/bash-practice/expense shell/backend.service /etc/systemd/system/backend.service &>>log
 lak $? "copied backend service"
 
 systemctl daemon-reload &>>log
