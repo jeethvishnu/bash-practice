@@ -12,5 +12,5 @@ then
     echo "$G src dir exist $N"
 else
     echo "$Y src $src dont exist $N"
-    exist 1
+    exit 1
 fi
