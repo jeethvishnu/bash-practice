@@ -9,8 +9,8 @@ N="\e[0m"
 
 if [ -d $src ]
 then
-    echo "$G src dir exist $N"
+    echo -e "$G src dir exist $N"
 else
-    echo "$Y src $src dont exist $N"
+    echo -e "$Y src $src dont exist $N"
     exit 1
 fi
