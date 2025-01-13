@@ -14,3 +14,6 @@ else
     echo -e "$Y src $src dont exist $N"
     exit 1
 fi
+
+f=$(find . -name "*log"  -mtime +14) #--> 14 means more than 14 days
+
