@@ -11,8 +11,8 @@ else
     echo "you are super usr"
 fi
 
+dnf install giteww -y #here we gave mistake 
 dnf install mysql -y
-dnf install giteree -y #here we gave mistake
 
 
 echo "is script proceeding"
