@@ -15,5 +15,10 @@ else
     exit 1
 fi
 
-f=$(find . -name "*log"  -mtime +14) #--> 14 means more than 14 days
+f=$(find $src -name "*.log"  -mtime +14) #--> 14 means more than 14 days
 
+while IFS= read -r line
+do
+    echo "deleting file: $line"
+    rm -rf $line
+done <<< $f
