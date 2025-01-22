@@ -5,6 +5,7 @@ crontab (short for "cron table") is a configuration file used to schedule tasks 
 
 crontab -l = it will list out
 
-crontab -e = it will let you edit in vi.
+crontab -e = it will let you edit in vi. there you've to give the * like line and space sh and give absolute path.
+with filename.
 
 visit the site crontab for knowing about syntax for time.
