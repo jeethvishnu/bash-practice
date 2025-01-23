@@ -9,7 +9,7 @@
       private: true
   tasks:
     - name: printing
-      ansible.buitlin.debug:
+      ansible.builtin.debug:
         msg: "username: {{usrname}}. password is {{passwd}}"
 
 
