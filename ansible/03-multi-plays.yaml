@@ -3,13 +3,12 @@
   tasks:
   - name: task 1 and play 1
     ansible.builtin.debug:
-    msg: "hello from task 1 and play 1"
+      msg: "hello from task 1 and play 1"
 
 - name: PLAY-2
   hosts: web
   tasks: 
   - name: task2 and play2
     ansible.builtin.debug:
-    msg: "hello from task2 and play2"
+      msg: "hello from task2 and play2"
 
-    
