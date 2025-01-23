@@ -9,8 +9,8 @@
       private: true
   tasks:
     - name: printing
-    ansible.buitlin.debug:
-      msg: "username: {{usrname}} password is {{passwd}}"
+      ansible.buitlin.debug:
+        msg: "username: {{usrname}} password is {{passwd}}"
 
 
 
