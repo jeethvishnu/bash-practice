@@ -7,7 +7,7 @@
   - name: passwd
     prompt: enter passwd
     private: true
-  tasks:
-  - name: printing
-    ansible.buitlin.debug:
-      msg: "enter username: {{usrname}} password is {{password}}"
+    tasks:
+    - name: printing
+      ansible.buitlin.debug:
+        msg: "enter username: {{usrname}} password is {{password}}"
