@@ -10,4 +10,4 @@
   tasks:
   - name: printing
     ansible.buitlin.debug:
-      msg: "enter username: {{usrname}} password is {{password}}"
+      msg: "enter username: {{usrname}} password is {{passwd}}"
