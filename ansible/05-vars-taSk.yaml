@@ -1,3 +1,4 @@
+#Task level variables
 - name: variables
   hosts: localhost
   vars:

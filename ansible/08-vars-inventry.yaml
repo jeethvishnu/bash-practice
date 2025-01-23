@@ -1,0 +1,7 @@
+- name: vars from inventory
+  hosts: localhost
+  tasks:
+  - name: printing
+    ansible.builtin.debug:
+      msg: "this course is{{course}} name is {{name}}"
+      
