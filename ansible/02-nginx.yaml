@@ -1,8 +1,8 @@
-- name: install nginx and run
+- name: install nginx and run #task name
   hosts: web
-  become: yes
+  become: yes # giving elevated privilages
   tasks:
-  - name: install nginx
+  - name: install nginx 
     ansible.builtin.dnf:
       name: nginx
       state: latest
@@ -11,4 +11,3 @@
       name: nginx
       state: started
       enabled: yes
-
