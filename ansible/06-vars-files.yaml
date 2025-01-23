@@ -4,7 +4,6 @@
   vars_files:
   - var.yaml
   tasks:
-  - name:printing
+  - name: printing
     ansible.builtin.debug:
       msg: "hi course is {{course}} {{duration}} {{name}}"
-      
