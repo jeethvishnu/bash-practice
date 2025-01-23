@@ -3,9 +3,8 @@
   vars: #variable declaration
     course: "ansible"
     duration: "111hrs"
-    train: "vishnu"
+    train: "jeeth"
   tasks:
   - name: printing info
     ansible.builtin.debug:
       msg: "i am learning {{course}} and duration is {{duration}} name is {{train}}"
-      
