@@ -1,0 +1,17 @@
+- name: datatypes
+hosts: localhost
+vars:
+  course: devops #string
+  tools: #lists
+  - linux
+  - aws
+  - jenkins
+  experience: #map
+    dev: 2
+    linux: 1
+    jenkins: 2
+  realproject: true #boolean
+tasks:
+- name: print
+  ansible.builtin.debug
+  
