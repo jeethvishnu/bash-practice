@@ -59,7 +59,7 @@
   hosts: localhost
   vars:
     my_list:
-    {'key': 'course', 'value': 'ansible'}, 
+    {'key': 'course', 'value': 'ansible'}
     {'key': 'duration', 'value': '2hr'}
 
   tasks:
