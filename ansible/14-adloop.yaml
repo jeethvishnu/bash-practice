@@ -1,5 +1,5 @@
 - name: loops 2
-  hosts: web
+  hosts: localhost
   become: yes
   tasks:
   - name: install packages
@@ -10,4 +10,3 @@
     loop:
     - {name: 'mysql',state: 'latest'}
     - {name: 'postfix',state: 'absent'}
-    
