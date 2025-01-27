@@ -18,7 +18,7 @@
   hosts: localhost
   vars:
     name: "vishnu"
-  - tasks:
+  tasks:
     ansible.builtin.debug:
       msg: "{{name | lower}}"
 
