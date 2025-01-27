@@ -41,7 +41,7 @@
     ansible.builtin.debug:
       msg: "max is: {{ ages | max }} min is: {{ages | min}}"
 
-- name: dictonary
+- name: dictonary into items
   hosts: localhost
   vars:
     dict: 
@@ -54,3 +54,17 @@
   - name: after
     ansible.builtin.debug:
       msg: "after: {{dict | dict2items}}"
+
+- name: items to dict
+  hosts: localhost
+  vars:
+    my_list:
+    - {'key': 'course', 'val': 'ansible'}
+    - {'key': 'durat','val': 22}
+  tasks:
+  - name: befor convert
+    ansible.builtin.debug:
+      msg: "before {{my_list}}"
+  - name: after
+    ansible.builtin.debug:
+      msg: "after {{my_list | items2dict}}"
