@@ -3,10 +3,9 @@
   hosts: localhost
   tasks:
   - name: print names
-  ansible.builtin.debug:
-    msg: "hello {{items}}"
+    ansible.builtin.debug:
+      msg: "hello {{items}}"
   loops:
   - linux
   - shell
   - vishnu
-  
