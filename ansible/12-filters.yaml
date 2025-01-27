@@ -40,3 +40,17 @@
   - name: max min
     ansible.builtin.debug:
       msg: "max is: {{ ages | max }} min is: {{ages | min}}"
+
+- name: dictonary
+  hosts: localhost
+  vars:
+    dict: 
+      course: ansible
+      duration: 2hr
+  tasks:
+  - name: before convert 
+    ansible.builtin.debug:
+      msg: "before: {{dict}}"
+  - name: after
+    ansible.builtin.debug:
+      msg: "after: {{dict | dict2items}}"
