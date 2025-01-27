@@ -5,11 +5,11 @@
     ansible.builtin.debug:
       msg: "hello {{course | default('ansible')}}"
 
-  - name: upper case
-    hosts: localhost
-    vars:
-      greetings: "hello, good mrng"
-    tasks:
-    - name: convert into uppercase
-      ansible.builtin.debug:
-        msg: "{{greeting | upper}}"
+- name: upper case
+  hosts: localhost
+  vars:
+    greetings: "hello, good mrng"
+  tasks:
+  - name: convert into uppercase
+    ansible.builtin.debug:
+      msg: "{{greeting | upper}}"
