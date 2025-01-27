@@ -5,7 +5,8 @@
   - name: print names
     ansible.builtin.debug:
       msg: "hello {{items}}"
-  loops:
-  - linux
-  - shell
-  - vishnu
+    loop:
+    - linuc
+    - shell
+    - vishnu
+ 
