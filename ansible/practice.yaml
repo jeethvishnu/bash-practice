@@ -19,3 +19,76 @@
       state: started
       enabled: yes
        
+
+- name: install nginx and run
+  hosts: web
+  become: yes
+  tasks:  
+  - name: install nginx
+    ansible.builtin.dnf:
+      name: nginx
+      state: latest
+  - name: run it
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
+
+- name: playbook1
+  hosts: localhost
+  tasks:
+  - name: printing
+    ansible.builtin.debug:
+      msg: "hello"
+
+- name: play2
+  hosts: localhost
+  tasks:
+  - name: msg
+  ansible.builtin.debug:
+    msg: "hellllooo"
+
+
+- name: vars
+  hosts: localhost
+  vars:
+    name: "vishnu"
+    age: 11
+    id: 3322
+  tasks:
+  - name: printing
+    ansible.builtin.debug:
+      msg: "name is {{name}}, age is {{age}},id is {{id}}"
+
+- name: task vars
+  hosts: localhost
+  vars:
+    name: "vv"
+    age: 22
+  tasks:
+  - name: printing
+    vars:
+      name: "ss"
+      age: 23
+    ansible.builtin.debug:
+      msg: "name is {{name}} age is {{age}}"
+
+- name: vars from otherfiles
+  hosts: localhost
+  vars_files:
+    var.yaml
+  tasks: printing
+  ansible.builtin.debug:
+    msg: "hi there{{name}}"
+
+
+- name: vars from prompt
+  hosts: localhost
+  vars_prompt:
+    - name: usrname
+      prompt: "enter username"
+      private: false
+    - name: passwd
+      prompt: "enter passwd"
+      private: true
+    

@@ -1,0 +1,22 @@
+# for each and everything we may not find the modules so in that case we use something called command module
+- name: conditions
+  hosts: web
+  become: yes
+  tasks:
+  - name: check usr exist or not
+    ansible.builtin.command: id expense
+    register: USER #whatever the output comes from id expense that will store here
+    ignore_errors: true #means we are manually saying that even if error comes proceed
+
+  - name: print usr info #just seeing whats in the user (error)
+    ansible.builtin.debug:
+      msg: "user info: {{USER}}"
+
+  - name : create usr
+    ansible.builtin.command: useradd expense
+    when: USER.rc !=0 #condition
+    
+  - name: hello
+    ansible.builtin.debug:
+      msg: "hello"
+
