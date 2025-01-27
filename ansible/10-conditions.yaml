@@ -8,7 +8,7 @@
   - name: number is less than 20
     ansible.builtin.debug:
       msg: "given number {{number}} is less than 10"
-    when number | int < 20
+    when: number | int < 20 #here | means filter
   
   - name: number is greater than equal to 20
     ansible.builtin.debug:
