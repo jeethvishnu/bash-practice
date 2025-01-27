@@ -1,0 +1,15 @@
+- name: using default value this can be used as if we forget about giving variables the you can give like this
+  hosts: localhost
+  tasks:
+  - name: print default vars
+    ansible.builtin.debug:
+      msg: "hello {{course | default('ansible')}}"
+
+  - name: upper case
+    hosts: localhost
+    vars:
+      greetings: "hello, good mrng"
+    tasks:
+    - name: convert into uppercase
+      ansible.builtin.debug:
+        msg: {{greeting | upper}}
