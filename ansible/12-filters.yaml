@@ -17,7 +17,7 @@
 - name: lower case
   hosts: localhost
   vars:
-    name: "vishnu"
+    name: "VISHNU"
   tasks:
   - name: into lowercase
     ansible.builtin.debug:
