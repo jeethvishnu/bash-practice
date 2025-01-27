@@ -10,3 +10,18 @@
     - shell
     - vishnu
  
+ - name: install pacakages
+   hosts: web
+   become: yes
+   tasks:
+   - name: install
+     ansible.builtin.dnf:
+        name: "{{item}}"
+        state: latest
+      loop:
+      - mysql
+      - curl
+      - postfix
+      
+    
+   
