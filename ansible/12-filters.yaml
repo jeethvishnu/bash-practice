@@ -13,3 +13,12 @@
   - name: convert into uppercase
     ansible.builtin.debug:
       msg: "{{greetings | upper}}"
+
+- name: lower case
+  hosts: localhost
+  vars:
+    name: "vishnu"
+  - tasks:
+    ansible.builtin.debug:
+      msg: "{{name | lower}}"
+
